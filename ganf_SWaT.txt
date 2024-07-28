@@ -1,0 +1,314 @@
+$ bash train_water.sh
+Namespace(alpha_init=0.0, batch_norm=False, batch_size=64, cuda=False, data_dir='./data/SWaT_Dataset_Attack_v0.csv', graph='None', h_tol=0.0001, hidden_size=16, lambda1=0.0, log_interval=5, lr=0.002, max_iter=20, model='None', n_blocks=1, n_components=1, n_epochs=1, n_hidden=1, name='GANF_water_seed_18', output_dir='./checkpoint/model', rho_init=1.0, rho_max=1e+16, seed=18, weight_decay=0.0005)
+Loading dataset
+C:\Users\sejal\Downloads\GANF\dataset.py:74: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data.label[data.label!="Normal"]=1
+C:\Users\sejal\Downloads\GANF\dataset.py:75: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data.label[data.label=="Normal"]=0
+C:\Users\sejal\Downloads\GANF\dataset.py:77: UserWarning: Parsing dates in %d/%m/%Y %I:%M:%S %p format when dayfirst=False (the default) was specified. Pass `dayfirst=True` or specify a format to silence this warning.
+  data["Timestamp"] = pd.to_datetime(data["Timestamp"])
+train_water.py:83: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  A = torch.tensor(init, requires_grad=True, device=device)
+-1.9596558 -4.2107525 -1.8670303 -4.199956
+Epoch: 1, train -log_prob: -2.57, test -log_prob: -3.90, roc_val: 0.6245, roc_test: 0.7755 ,h: 0.06978988647460938
+rho: 1.0, alpha 0.0, h 0.06978988647460938
+===========================================
+-1.6704116 -2.5637274 -1.594193 -2.5405583
+Epoch: 2, train -log_prob: -0.33, test -log_prob: -2.41, roc_val: 0.6599, roc_test: 0.7931 ,h: 0.05477142333984375
+rho: 1.0, alpha 0.06978988647460938, h 0.05477142333984375
+===========================================
+-1.7092348 -2.5895414 -1.6640474 -2.5821426
+Epoch: 3, train -log_prob: -2.33, test -log_prob: -2.46, roc_val: 0.7022, roc_test: 0.7869 ,h: 0.012939453125
+rho: 10.0, alpha 0.06978988647460938, h 0.012939453125
+===========================================
+-1.7740955 -2.6582456 -1.6595429 -2.6496997
+Epoch: 4, train -log_prob: -2.40, test -log_prob: -2.54, roc_val: 0.7413, roc_test: 0.7939 ,h: 0.0052032470703125
+rho: 10.0, alpha 0.19918441772460938, h 0.0052032470703125
+===========================================
+-1.7536778 -2.6585004 -1.5595598 -2.657138
+Epoch: 5, train -log_prob: -2.44, test -log_prob: -2.55, roc_val: 0.7802, roc_test: 0.7992 ,h: 0.001979827880859375
+rho: 10.0, alpha 0.2512168884277344, h 0.001979827880859375
+===========================================
+-1.7622204 -2.6650288 -1.5357062 -2.648548
+Epoch: 6, train -log_prob: -2.48, test -log_prob: -2.56, roc_val: 0.7989, roc_test: 0.7996 ,h: 0.001476287841796875
+rho: 10.0, alpha 0.2710151672363281, h 0.001476287841796875
+===========================================
+-1.8634905 -2.7115448 -1.4402246 -2.7071295
+Epoch: 7, train -log_prob: -2.51, test -log_prob: -2.62, roc_val: 0.8128, roc_test: 0.8041 ,h: 0.00093841552734375
+rho: 100.0, alpha 0.2710151672363281, h 0.00093841552734375
+===========================================
+-1.9003632 -2.7630334 -1.4141988 -2.7479708
+Epoch: 8, train -log_prob: -2.55, test -log_prob: -2.65, roc_val: 0.7317, roc_test: 0.8211 ,h: 0.000713348388671875
+rho: 100.0, alpha 0.3648567199707031, h 0.000713348388671875
+===========================================
+-1.9578351 -2.737146 -1.3309537 -2.724852
+Epoch: 9, train -log_prob: -2.57, test -log_prob: -2.65, roc_val: 0.8265, roc_test: 0.8085 ,h: 0.0003662109375
+rho: 1000.0, alpha 0.3648567199707031, h 0.0003662109375
+===========================================
+-1.9794033 -2.7587607 -1.2133589 -2.746294
+Epoch: 10, train -log_prob: -2.60, test -log_prob: -2.67, roc_val: 0.8393, roc_test: 0.8108 ,h: 0.000217437744140625
+rho: 1000.0, alpha 0.7310676574707031, h 0.000217437744140625
+===========================================
+-1.969195 -2.8450923 -1.5935498 -2.8339381
+Epoch: 11, train -log_prob: -2.63, test -log_prob: -2.71, roc_val: 0.7345, roc_test: 0.8338 ,h: 9.918212890625e-05
+rho: 10000.0, alpha 0.7310676574707031, h 9.918212890625e-05
+===========================================
+Epoch: 12, train -log_prob: -2.66, test -log_prob: -2.73, roc_val: 0.7668, roc_test: 0.8261 ,h: 8.392333984375e-05
+save model 12 epoch
+Epoch: 13, train -log_prob: -2.75, test -log_prob: -3.09, roc_val: 0.8201, roc_test: 0.7729 ,h: 9.1552734375e-05
+save model 13 epoch
+Epoch: 14, train -log_prob: -2.77, test -log_prob: -2.76, roc_val: 0.7328, roc_test: 0.8191 ,h: 6.4849853515625e-05
+Epoch: 15, train -log_prob: -2.80, test -log_prob: -3.13, roc_val: 0.8118, roc_test: 0.8069 ,h: 7.2479248046875e-05
+save model 15 epoch
+Epoch: 16, train -log_prob: -2.81, test -log_prob: -2.76, roc_val: 0.8217, roc_test: 0.7626 ,h: 7.2479248046875e-05
+Epoch: 17, train -log_prob: -2.82, test -log_prob: -3.15, roc_val: 0.7869, roc_test: 0.7251 ,h: 9.1552734375e-05
+save model 17 epoch
+Epoch: 18, train -log_prob: -2.83, test -log_prob: -2.80, roc_val: 0.6869, roc_test: 0.7799 ,h: 8.0108642578125e-05
+Epoch: 19, train -log_prob: -2.84, test -log_prob: -3.15, roc_val: 0.7720, roc_test: 0.7913 ,h: 9.5367431640625e-05
+save model 19 epoch
+Epoch: 20, train -log_prob: -2.84, test -log_prob: -2.84, roc_val: 0.7109, roc_test: 0.7066 ,h: 0.000118255615234375
+Epoch: 21, train -log_prob: -2.84, test -log_prob: -3.17, roc_val: 0.8016, roc_test: 0.7453 ,h: 0.000110626220703125
+save model 21 epoch
+Epoch: 22, train -log_prob: -2.84, test -log_prob: -2.84, roc_val: 0.6062, roc_test: 0.7537 ,h: 0.000110626220703125
+Epoch: 23, train -log_prob: -2.84, test -log_prob: -3.18, roc_val: 0.7435, roc_test: 0.8228 ,h: 0.0001220703125
+save model 23 epoch
+Epoch: 24, train -log_prob: -2.85, test -log_prob: -2.90, roc_val: 0.7286, roc_test: 0.7563 ,h: 0.00012969970703125
+Epoch: 25, train -log_prob: -2.86, test -log_prob: -3.20, roc_val: 0.7361, roc_test: 0.7612 ,h: 8.7738037109375e-05
+save model 25 epoch
+Epoch: 26, train -log_prob: -2.88, test -log_prob: -2.93, roc_val: 0.6330, roc_test: 0.8050 ,h: 8.0108642578125e-05
+Epoch: 27, train -log_prob: -2.90, test -log_prob: -3.24, roc_val: 0.7798, roc_test: 0.8238 ,h: 9.918212890625e-05
+save model 27 epoch
+Epoch: 28, train -log_prob: -2.92, test -log_prob: -2.94, roc_val: 0.7368, roc_test: 0.7945 ,h: 9.918212890625e-05
+Epoch: 29, train -log_prob: -2.94, test -log_prob: -3.30, roc_val: 0.7910, roc_test: 0.7544 ,h: 8.0108642578125e-05
+save model 29 epoch
+Epoch: 30, train -log_prob: -2.94, test -log_prob: -3.00, roc_val: 0.7163, roc_test: 0.8127 ,h: 6.866455078125e-05
+Epoch: 31, train -log_prob: -2.95, test -log_prob: -3.30, roc_val: 0.8224, roc_test: 0.7917 ,h: 5.7220458984375e-05
+save model 31 epoch
+Epoch: 32, train -log_prob: -2.96, test -log_prob: -2.95, roc_val: 0.6656, roc_test: 0.7675 ,h: 0.0001068115234375
+Epoch: 33, train -log_prob: -2.96, test -log_prob: -3.38, roc_val: 0.6654, roc_test: 0.7880 ,h: 9.1552734375e-05
+save model 33 epoch
+Epoch: 34, train -log_prob: -2.98, test -log_prob: -2.95, roc_val: 0.7907, roc_test: 0.7918 ,h: 8.0108642578125e-05
+Epoch: 35, train -log_prob: -2.99, test -log_prob: -3.31, roc_val: 0.8078, roc_test: 0.8005 ,h: 8.0108642578125e-05
+Epoch: 36, train -log_prob: -2.99, test -log_prob: -3.03, roc_val: 0.6396, roc_test: 0.7521 ,h: 4.9591064453125e-05
+Epoch: 37, train -log_prob: -3.00, test -log_prob: -3.33, roc_val: 0.7572, roc_test: 0.8161 ,h: 3.814697265625e-05
+Epoch: 38, train -log_prob: -3.01, test -log_prob: -3.07, roc_val: 0.6934, roc_test: 0.8100 ,h: 7.62939453125e-05
+Epoch: 39, train -log_prob: -3.02, test -log_prob: -3.33, roc_val: 0.7350, roc_test: 0.8068 ,h: 9.5367431640625e-05
+Epoch: 40, train -log_prob: -3.03, test -log_prob: -3.08, roc_val: 0.6728, roc_test: 0.7532 ,h: 9.1552734375e-05
+Epoch: 41, train -log_prob: -3.04, test -log_prob: -3.43, roc_val: 0.7444, roc_test: 0.7949 ,h: 6.103515625e-05
+save model 41 epoch
+Namespace(alpha_init=0.0, batch_norm=False, batch_size=64, cuda=False, data_dir='./data/SWaT_Dataset_Attack_v0.csv', graph='None', h_tol=0.0001, hidden_size=16, lambda1=0.0, log_interval=5, lr=0.002, max_iter=20, model='None', n_blocks=1, n_components=1, n_epochs=1, n_hidden=1, name='GANF_water_seed_19', output_dir='./checkpoint/model', rho_init=1.0, rho_max=1e+16, seed=19, weight_decay=0.0005)
+Loading dataset
+C:\Users\sejal\Downloads\GANF\dataset.py:74: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data.label[data.label!="Normal"]=1
+C:\Users\sejal\Downloads\GANF\dataset.py:75: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data.label[data.label=="Normal"]=0
+C:\Users\sejal\Downloads\GANF\dataset.py:77: UserWarning: Parsing dates in %d/%m/%Y %I:%M:%S %p format when dayfirst=False (the default) was specified. Pass `dayfirst=True` or specify a format to silence this warning.
+  data["Timestamp"] = pd.to_datetime(data["Timestamp"])
+train_water.py:83: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  A = torch.tensor(init, requires_grad=True, device=device)
+-0.9163453 -3.8581524 -1.2688928 -3.772548
+Epoch: 1, train -log_prob: -2.24, test -log_prob: -3.45, roc_val: 0.6551, roc_test: 0.6467 ,h: 0.059932708740234375
+rho: 1.0, alpha 0.0, h 0.059932708740234375
+===========================================
+-1.4290962 -3.4747589 -1.8070924 -3.4782145
+Epoch: 2, train -log_prob: -1.48, test -log_prob: -3.26, roc_val: 0.7632, roc_test: 0.5956 ,h: 0.022869110107421875
+rho: 1.0, alpha 0.059932708740234375, h 0.022869110107421875
+===========================================
+-1.7627871 -3.7060144 -2.136307 -3.6901627
+Epoch: 3, train -log_prob: -2.49, test -log_prob: -3.48, roc_val: 0.7478, roc_test: 0.7303 ,h: 0.009860992431640625
+rho: 1.0, alpha 0.08280181884765625, h 0.009860992431640625
+===========================================
+-2.266571 -3.710743 -2.384927 -3.7030067
+Epoch: 4, train -log_prob: -2.45, test -log_prob: -3.50, roc_val: 0.7709, roc_test: 0.6285 ,h: 0.0037078857421875
+rho: 1.0, alpha 0.09266281127929688, h 0.0037078857421875
+===========================================
+-2.4200659 -3.4993486 -2.3803048 -3.485681
+Epoch: 5, train -log_prob: -2.11, test -log_prob: -3.33, roc_val: 0.8115, roc_test: 0.7284 ,h: 0.0007476806640625
+rho: 1.0, alpha 0.09637069702148438, h 0.0007476806640625
+===========================================
+-2.5210729 -3.8806133 -2.6318874 -3.8679097
+Epoch: 6, train -log_prob: -3.02, test -log_prob: -3.72, roc_val: 0.7874, roc_test: 0.6646 ,h: 0.00032806396484375
+rho: 1.0, alpha 0.09711837768554688, h 0.00032806396484375
+===========================================
+-2.4379525 -3.874055 -2.6951463 -3.8583272
+Epoch: 7, train -log_prob: -2.71, test -log_prob: -3.72, roc_val: 0.8168, roc_test: 0.7728 ,h: 0.000560760498046875
+rho: 1.0, alpha 0.09744644165039062, h 0.000560760498046875
+===========================================
+-1.9692912 -2.881063 -2.0728908 -2.8829427
+Epoch: 8, train -log_prob: -2.04, test -log_prob: -2.78, roc_val: 0.6809, roc_test: 0.7623 ,h: 0.000110626220703125
+rho: 10.0, alpha 0.09744644165039062, h 0.000110626220703125
+===========================================
+-1.7526315 -2.5933917 -1.848883 -2.595508
+Epoch: 9, train -log_prob: -2.28, test -log_prob: -2.48, roc_val: 0.7151, roc_test: 0.7542 ,h: 0.000156402587890625
+rho: 10.0, alpha 0.09855270385742188, h 0.000156402587890625
+===========================================
+-1.7863833 -2.612613 -1.817743 -2.6116424
+Epoch: 10, train -log_prob: -2.43, test -log_prob: -2.52, roc_val: 0.7463, roc_test: 0.7688 ,h: 0.000423431396484375
+rho: 100.0, alpha 0.09855270385742188, h 0.000423431396484375
+===========================================
+-1.7914033 -2.6023378 -1.8493642 -2.5957465
+Epoch: 11, train -log_prob: -2.46, test -log_prob: -2.53, roc_val: 0.7846, roc_test: 0.7660 ,h: 0.00026702880859375
+rho: 1000.0, alpha 0.09855270385742188, h 0.00026702880859375
+===========================================
+-1.8191621 -2.627312 -1.7380179 -2.6307096
+Epoch: 12, train -log_prob: -2.48, test -log_prob: -2.50, roc_val: 0.7301, roc_test: 0.7450 ,h: 8.392333984375e-05
+rho: 10000.0, alpha 0.09855270385742188, h 8.392333984375e-05
+===========================================
+-1.8885233 -2.6678588 -1.8534716 -2.6771135
+Epoch: 13, train -log_prob: -2.50, test -log_prob: -2.56, roc_val: 0.7563, roc_test: 0.7514 ,h: 2.6702880859375e-05
+rho: 100000.0, alpha 0.09855270385742188, h 2.6702880859375e-05
+===========================================
+Epoch: 14, train -log_prob: -2.51, test -log_prob: -2.56, roc_val: 0.7289, roc_test: 0.7023 ,h: 1.52587890625e-05
+save model 14 epoch
+Epoch: 15, train -log_prob: -2.59, test -log_prob: -2.93, roc_val: 0.7548, roc_test: 0.7574 ,h: 7.62939453125e-06
+save model 15 epoch
+Epoch: 16, train -log_prob: -2.60, test -log_prob: -2.59, roc_val: 0.6834, roc_test: 0.7463 ,h: 7.62939453125e-06
+Epoch: 17, train -log_prob: -2.61, test -log_prob: -2.95, roc_val: 0.7344, roc_test: 0.7919 ,h: 7.62939453125e-06
+save model 17 epoch
+Epoch: 18, train -log_prob: -2.61, test -log_prob: -2.61, roc_val: 0.6590, roc_test: 0.6738 ,h: 1.1444091796875e-05
+Epoch: 19, train -log_prob: -2.61, test -log_prob: -2.91, roc_val: 0.8438, roc_test: 0.7559 ,h: 1.1444091796875e-05
+Epoch: 20, train -log_prob: -2.62, test -log_prob: -2.58, roc_val: 0.7074, roc_test: 0.7311 ,h: 7.62939453125e-06
+Epoch: 21, train -log_prob: -2.62, test -log_prob: -2.93, roc_val: 0.8054, roc_test: 0.7965 ,h: 7.62939453125e-06
+Epoch: 22, train -log_prob: -2.62, test -log_prob: -2.58, roc_val: 0.6284, roc_test: 0.6717 ,h: 1.1444091796875e-05
+Epoch: 23, train -log_prob: -2.62, test -log_prob: -2.94, roc_val: 0.8325, roc_test: 0.7466 ,h: 1.1444091796875e-05
+Epoch: 24, train -log_prob: -2.62, test -log_prob: -2.61, roc_val: 0.6871, roc_test: 0.7204 ,h: 1.1444091796875e-05
+Epoch: 25, train -log_prob: -2.62, test -log_prob: -2.95, roc_val: 0.8193, roc_test: 0.8012 ,h: 1.52587890625e-05
+save model 25 epoch
+Epoch: 26, train -log_prob: -2.62, test -log_prob: -2.59, roc_val: 0.7672, roc_test: 0.7295 ,h: 2.288818359375e-05
+Epoch: 27, train -log_prob: -2.63, test -log_prob: -2.93, roc_val: 0.8576, roc_test: 0.7483 ,h: 1.52587890625e-05
+Epoch: 28, train -log_prob: -2.63, test -log_prob: -2.59, roc_val: 0.7563, roc_test: 0.7881 ,h: 1.52587890625e-05
+Epoch: 29, train -log_prob: -2.63, test -log_prob: -2.91, roc_val: 0.8557, roc_test: 0.7482 ,h: 1.9073486328125e-05
+Epoch: 30, train -log_prob: -2.63, test -log_prob: -2.59, roc_val: 0.7168, roc_test: 0.7136 ,h: 1.52587890625e-05
+Epoch: 31, train -log_prob: -2.63, test -log_prob: -2.95, roc_val: 0.7455, roc_test: 0.7606 ,h: 1.9073486328125e-05
+Epoch: 32, train -log_prob: -2.63, test -log_prob: -2.64, roc_val: 0.6944, roc_test: 0.7052 ,h: 1.9073486328125e-05
+Epoch: 33, train -log_prob: -2.63, test -log_prob: -2.96, roc_val: 0.7607, roc_test: 0.7843 ,h: 1.52587890625e-05
+save model 33 epoch
+Epoch: 34, train -log_prob: -2.63, test -log_prob: -2.58, roc_val: 0.7211, roc_test: 0.7453 ,h: 4.1961669921875e-05
+Epoch: 35, train -log_prob: -2.90, test -log_prob: -3.77, roc_val: 0.7677, roc_test: 0.7979 ,h: 3.0517578125e-05
+save model 35 epoch
+Epoch: 36, train -log_prob: -3.66, test -log_prob: -3.84, roc_val: 0.8059, roc_test: 0.7353 ,h: 4.1961669921875e-05
+save model 36 epoch
+Epoch: 37, train -log_prob: -3.69, test -log_prob: -3.85, roc_val: 0.8400, roc_test: 0.7696 ,h: 3.0517578125e-05
+save model 37 epoch
+Epoch: 38, train -log_prob: -3.70, test -log_prob: -3.88, roc_val: 0.7669, roc_test: 0.7620 ,h: 3.814697265625e-05
+save model 38 epoch
+Epoch: 39, train -log_prob: -3.71, test -log_prob: -3.83, roc_val: 0.7761, roc_test: 0.7847 ,h: 3.0517578125e-05
+Epoch: 40, train -log_prob: -3.71, test -log_prob: -3.81, roc_val: 0.8554, roc_test: 0.7402 ,h: 2.288818359375e-05
+Epoch: 41, train -log_prob: -3.72, test -log_prob: -3.87, roc_val: 0.8290, roc_test: 0.8115 ,h: 3.814697265625e-05
+Epoch: 42, train -log_prob: -3.72, test -log_prob: -3.90, roc_val: 0.8272, roc_test: 0.7598 ,h: 2.6702880859375e-05
+save model 42 epoch
+Epoch: 43, train -log_prob: -3.73, test -log_prob: -3.86, roc_val: 0.8223, roc_test: 0.8025 ,h: 2.6702880859375e-05
+Namespace(alpha_init=0.0, batch_norm=False, batch_size=64, cuda=False, data_dir='./data/SWaT_Dataset_Attack_v0.csv', graph='None', h_tol=0.0001, hidden_size=16, lambda1=0.0, log_interval=5, lr=0.002, max_iter=20, model='None', n_blocks=1, n_components=1, n_epochs=1, n_hidden=1, name='GANF_water_seed_20', output_dir='./checkpoint/model', rho_init=1.0, rho_max=1e+16, seed=20, weight_decay=0.0005)
+Loading dataset
+C:\Users\sejal\Downloads\GANF\dataset.py:74: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data.label[data.label!="Normal"]=1
+C:\Users\sejal\Downloads\GANF\dataset.py:75: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data.label[data.label=="Normal"]=0
+C:\Users\sejal\Downloads\GANF\dataset.py:77: UserWarning: Parsing dates in %d/%m/%Y %I:%M:%S %p format when dayfirst=False (the default) was specified. Pass `dayfirst=True` or specify a format to silence this warning.
+  data["Timestamp"] = pd.to_datetime(data["Timestamp"])
+train_water.py:83: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  A = torch.tensor(init, requires_grad=True, device=device)
+-2.0805364 -3.3979661 -2.1867354 -3.3612819
+Epoch: 1, train -log_prob: -2.16, test -log_prob: -3.25, roc_val: 0.8157, roc_test: 0.7568 ,h: 0.0597991943359375
+rho: 1.0, alpha 0.0, h 0.0597991943359375
+===========================================
+-1.5765603 -2.7551322 -1.7855903 -2.7560043
+Epoch: 2, train -log_prob: -2.09, test -log_prob: -2.65, roc_val: 0.8363, roc_test: 0.7798 ,h: 0.04358673095703125
+rho: 1.0, alpha 0.0597991943359375, h 0.04358673095703125
+===========================================
+-1.5759358 -2.4988155 -1.6857873 -2.499476
+Epoch: 3, train -log_prob: -2.18, test -log_prob: -2.42, roc_val: 0.8542, roc_test: 0.7988 ,h: 0.0113372802734375
+rho: 10.0, alpha 0.0597991943359375, h 0.0113372802734375
+===========================================
+-1.6644942 -2.5456572 -1.8237537 -2.5373044
+Epoch: 4, train -log_prob: -2.37, test -log_prob: -2.48, roc_val: 0.7836, roc_test: 0.7899 ,h: 0.00243377685546875
+rho: 10.0, alpha 0.1731719970703125, h 0.00243377685546875
+===========================================
+-1.6741731 -2.5932703 -1.8682096 -2.5870247
+Epoch: 5, train -log_prob: -2.44, test -log_prob: -2.52, roc_val: 0.7667, roc_test: 0.7850 ,h: 0.000423431396484375
+rho: 10.0, alpha 0.197509765625, h 0.000423431396484375
+===========================================
+-1.6666043 -2.6433868 -1.9591821 -2.6427963
+Epoch: 6, train -log_prob: -2.49, test -log_prob: -2.58, roc_val: 0.7705, roc_test: 0.7986 ,h: 0.00042724609375
+rho: 10.0, alpha 0.20174407958984375, h 0.00042724609375
+===========================================
+-1.6494951 -2.6427164 -1.9358383 -2.6412978
+Epoch: 7, train -log_prob: -2.53, test -log_prob: -2.58, roc_val: 0.7830, roc_test: 0.8041 ,h: 0.000301361083984375
+rho: 100.0, alpha 0.20174407958984375, h 0.000301361083984375
+===========================================
+-1.7634251 -2.7489629 -2.0310018 -2.7539701
+Epoch: 8, train -log_prob: -2.56, test -log_prob: -2.66, roc_val: 0.7464, roc_test: 0.7924 ,h: 0.000110626220703125
+rho: 1000.0, alpha 0.20174407958984375, h 0.000110626220703125
+===========================================
+-1.7781391 -2.7217844 -2.022162 -2.7230246
+Epoch: 9, train -log_prob: -2.58, test -log_prob: -2.65, roc_val: 0.7572, roc_test: 0.7941 ,h: 0.0001220703125
+rho: 1000.0, alpha 0.31237030029296875, h 0.0001220703125
+===========================================
+-1.81752 -2.7575932 -2.0650308 -2.7642357
+Epoch: 10, train -log_prob: -2.60, test -log_prob: -2.68, roc_val: 0.7469, roc_test: 0.7853 ,h: 3.814697265625e-05
+rho: 10000.0, alpha 0.31237030029296875, h 3.814697265625e-05
+===========================================
+Epoch: 11, train -log_prob: -2.61, test -log_prob: -2.67, roc_val: 0.7644, roc_test: 0.7953 ,h: 2.288818359375e-05
+save model 11 epoch
+Epoch: 12, train -log_prob: -2.70, test -log_prob: -3.04, roc_val: 0.8473, roc_test: 0.8047 ,h: 2.6702880859375e-05
+save model 12 epoch
+Epoch: 13, train -log_prob: -2.70, test -log_prob: -2.67, roc_val: 0.7499, roc_test: 0.7920 ,h: 1.9073486328125e-05
+Epoch: 14, train -log_prob: -2.71, test -log_prob: -3.02, roc_val: 0.8599, roc_test: 0.7984 ,h: 2.288818359375e-05
+Epoch: 15, train -log_prob: -2.72, test -log_prob: -2.68, roc_val: 0.7701, roc_test: 0.7932 ,h: 2.6702880859375e-05
+Epoch: 16, train -log_prob: -2.73, test -log_prob: -3.07, roc_val: 0.8453, roc_test: 0.7983 ,h: 7.62939453125e-06
+save model 16 epoch
+Epoch: 17, train -log_prob: -2.73, test -log_prob: -2.69, roc_val: 0.7494, roc_test: 0.7796 ,h: 2.288818359375e-05
+Epoch: 18, train -log_prob: -2.74, test -log_prob: -3.07, roc_val: 0.7961, roc_test: 0.7997 ,h: 1.1444091796875e-05
+Epoch: 19, train -log_prob: -2.75, test -log_prob: -2.72, roc_val: 0.7408, roc_test: 0.7624 ,h: 3.0517578125e-05
+Epoch: 20, train -log_prob: -2.76, test -log_prob: -3.13, roc_val: 0.7840, roc_test: 0.7873 ,h: 2.288818359375e-05
+save model 20 epoch
+Epoch: 21, train -log_prob: -2.76, test -log_prob: -2.74, roc_val: 0.7631, roc_test: 0.8009 ,h: 1.9073486328125e-05
+Epoch: 22, train -log_prob: -2.77, test -log_prob: -3.10, roc_val: 0.7614, roc_test: 0.8123 ,h: 2.6702880859375e-05
+Epoch: 23, train -log_prob: -2.77, test -log_prob: -2.75, roc_val: 0.7706, roc_test: 0.7680 ,h: 2.6702880859375e-05
+Epoch: 24, train -log_prob: -2.78, test -log_prob: -3.13, roc_val: 0.7747, roc_test: 0.7920 ,h: 1.52587890625e-05
+save model 24 epoch
+Epoch: 25, train -log_prob: -2.78, test -log_prob: -2.71, roc_val: 0.7673, roc_test: 0.7968 ,h: 1.9073486328125e-05
+Epoch: 26, train -log_prob: -2.78, test -log_prob: -3.11, roc_val: 0.8288, roc_test: 0.8085 ,h: 1.52587890625e-05
+Epoch: 27, train -log_prob: -2.78, test -log_prob: -2.73, roc_val: 0.7672, roc_test: 0.7777 ,h: 1.1444091796875e-05
+Epoch: 28, train -log_prob: -2.78, test -log_prob: -3.13, roc_val: 0.8613, roc_test: 0.8021 ,h: 3.0517578125e-05
+save model 28 epoch
+Epoch: 29, train -log_prob: -2.78, test -log_prob: -2.74, roc_val: 0.8316, roc_test: 0.8091 ,h: 1.1444091796875e-05
+Epoch: 30, train -log_prob: -2.79, test -log_prob: -3.12, roc_val: 0.8025, roc_test: 0.8181 ,h: 1.52587890625e-05
+Epoch: 31, train -log_prob: -2.79, test -log_prob: -2.75, roc_val: 0.8228, roc_test: 0.7651 ,h: 2.6702880859375e-05
+Epoch: 32, train -log_prob: -2.81, test -log_prob: -3.14, roc_val: 0.7953, roc_test: 0.7909 ,h: 2.6702880859375e-05
+save model 32 epoch
+Epoch: 33, train -log_prob: -2.82, test -log_prob: -2.77, roc_val: 0.8948, roc_test: 0.8478 ,h: 1.9073486328125e-05
+Epoch: 34, train -log_prob: -2.83, test -log_prob: -3.15, roc_val: 0.8826, roc_test: 0.8200 ,h: 3.0517578125e-05
+save model 34 epoch
+Epoch: 35, train -log_prob: -2.84, test -log_prob: -2.81, roc_val: 0.8047, roc_test: 0.7606 ,h: 3.0517578125e-05
+Epoch: 36, train -log_prob: -2.85, test -log_prob: -3.19, roc_val: 0.9016, roc_test: 0.7935 ,h: 5.340576171875e-05
+save model 36 epoch
+Epoch: 37, train -log_prob: -2.85, test -log_prob: -2.93, roc_val: 0.8428, roc_test: 0.8401 ,h: 2.288818359375e-05
+Epoch: 38, train -log_prob: -2.86, test -log_prob: -3.19, roc_val: 0.8568, roc_test: 0.8293 ,h: 4.1961669921875e-05
+save model 38 epoch
+Epoch: 39, train -log_prob: -2.86, test -log_prob: -2.81, roc_val: 0.8028, roc_test: 0.7812 ,h: 7.2479248046875e-05
+Epoch: 40, train -log_prob: -2.87, test -log_prob: -3.18, roc_val: 0.8846, roc_test: 0.7914 ,h: 7.2479248046875e-05
+(myenv)
+
+
+
+After running eval_water.py: 
+The ROC score on SWaT dataset is 0.8102165694784723
